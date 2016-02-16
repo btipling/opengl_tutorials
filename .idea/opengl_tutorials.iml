@@ -27,6 +27,8 @@
       <sourceFolder url="file://$MODULE_DIR$/chapter_2/dot.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chapter_2/color.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/debug.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/opengl_tutorials.h" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

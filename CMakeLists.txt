@@ -28,7 +28,7 @@ add_library(sb7
 
 file(COPY ${CMAKE_SOURCE_DIR}/shaders DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources/)
 
-set(SOURCE_FILES chapter_2/color.cpp opengl_tutorials.h debug.h debug.cpp)
+set(SOURCE_FILES chapter_2/color.cpp opengl_tutorials.h debug.cpp)
 add_executable(color ${SOURCE_FILES})
 target_link_libraries(color ${COMMON_LIBS})
 

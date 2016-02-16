@@ -20,8 +20,11 @@ public:
         GLuint fragment_shader;
         GLuint program;
 
-        static const GLchar * vertex_shader_source = get_shader("vertex.vs").c_str();
-        static const GLchar * fragment_shader_source = get_shader("fragment.vs").c_str();
+        std::string vertex_shader_source_string = get_shader("vertex.vert");
+        const GLchar * vertex_shader_source = vertex_shader_source_string.c_str();
+
+        std::string fragment_shader_source_string = get_shader("fragment.vert");
+        const GLchar * fragment_shader_source = fragment_shader_source_string.c_str();
 
         vertex_shader = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);

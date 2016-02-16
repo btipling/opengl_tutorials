@@ -19,15 +19,16 @@ public:
         GLuint fragment_shader;
         GLuint program;
 
-        std::string vertex_shader_source_string = get_shader("triangle_vertex.vs");
+        std::string vertex_shader_source_string = get_shader("triangle_vertex.vert");
         const GLchar * vertex_shader_source = vertex_shader_source_string.c_str();
+
+        std::string fragment_shader_source_string = get_shader("fragment.vert");
+        const GLchar * fragment_shader_source = fragment_shader_source_string.c_str();
+
 
         vertex_shader = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
         glCompileShader(vertex_shader);
-
-        std::string fragment_shader_source_string = get_shader("fragment.vs");
-        const GLchar * fragment_shader_source = fragment_shader_source_string.c_str();
 
         fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
         glShaderSource(fragment_shader, 1, &fragment_shader_source, NULL);
