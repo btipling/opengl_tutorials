@@ -1,6 +1,7 @@
 
 #include "sb7.h"
 #include <iostream>
+#include "opengl_tutorials.h"
 
 class dot : public sb7::application {
 public:
@@ -9,7 +10,6 @@ public:
         float g = (float) cos(currentTime) * 0.5f + 0.5f;
         GLfloat red[] = { r, g, 0.0f, 1.0f };
         glClearBufferfv(GL_COLOR, 0, red);
-        std::cout << "lol " << currentTime << " " << red << '\n';
         glUseProgram(rendering_program);
         glPointSize(40.0f);
         glDrawArrays(GL_POINTS, 0, 1);
@@ -20,19 +20,15 @@ public:
         GLuint fragment_shader;
         GLuint program;
 
-        static const GLchar * vertex_shader_source[] = {
-            #include "./shaders/vertex.vs"
-        };
-        static const GLchar * fragment_shader_source[] = {
-            #include "./shaders/fragment.vs"
-        };
+        static const GLchar * vertex_shader_source = get_shader("vertex.vs").c_str();
+        static const GLchar * fragment_shader_source = get_shader("fragment.vs").c_str();
 
         vertex_shader = glCreateShader(GL_VERTEX_SHADER);
-        glShaderSource(vertex_shader, 1, vertex_shader_source, NULL);
+        glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
         glCompileShader(vertex_shader);
 
         fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
-        glShaderSource(fragment_shader, 1, fragment_shader_source, NULL);
+        glShaderSource(fragment_shader, 1, &fragment_shader_source, NULL);
         glCompileShader(fragment_shader);
 
         program = glCreateProgram();
