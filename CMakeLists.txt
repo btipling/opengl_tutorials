@@ -26,3 +26,7 @@ target_link_libraries(color ${COMMON_LIBS})
 set(SOURCE_FILES  chapter_1/dot.cpp)
 add_executable(dot ${SOURCE_FILES})
 target_link_libraries(dot ${COMMON_LIBS})
+
+set(SOURCE_FILES  chapter_1/triangle.cpp)
+add_executable(triangle ${SOURCE_FILES})
+target_link_libraries(triangle ${COMMON_LIBS})
