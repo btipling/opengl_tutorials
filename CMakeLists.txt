@@ -39,3 +39,7 @@ target_link_libraries(dot ${COMMON_LIBS})
 set(SOURCE_FILES chapter_2/triangle.cpp)
 add_executable(triangle ${SOURCE_FILES})
 target_link_libraries(triangle ${COMMON_LIBS})
+
+set(SOURCE_FILES chapter_3/animated_triangle.cpp)
+add_executable(an_triangle ${SOURCE_FILES})
+target_link_libraries(an_triangle ${COMMON_LIBS})
