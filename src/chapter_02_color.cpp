@@ -2,7 +2,7 @@
 #include "sb7.h"
 #include <iostream>
 
-class color : public sb7::application {
+class chapter_02_color : public sb7::application {
     public:
     void render(double currentTime) {
         float r = (float) sin(currentTime) * 0.5f + 0.5f;
@@ -14,4 +14,4 @@ class color : public sb7::application {
 
 };
 
-DECLARE_MAIN(color);
+DECLARE_MAIN(chapter_02_color);

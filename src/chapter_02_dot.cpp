@@ -3,7 +3,7 @@
 #include <iostream>
 #include "opengl_tutorials.h"
 
-class dot : public sb7::application {
+class chapter_02_dot : public sb7::application {
 public:
     void render(double currentTime) {
         float r = (float) sin(currentTime) * 0.5f + 0.5f;
@@ -63,4 +63,4 @@ private:
 
 };
 
-DECLARE_MAIN(dot);
+DECLARE_MAIN(chapter_02_dot);

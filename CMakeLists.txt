@@ -25,21 +25,18 @@ add_library(sb7
     ${SB7_DIR}/src/sb7/gl3w.c
 )
 
-
 file(COPY ${CMAKE_SOURCE_DIR}/shaders DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources/)
+set(EXERCISES
+    chapter_02_color
+    chapter_02_dot
+    chapter_02_triangle
+    chapter_03_animated_triangle
+    chapter_03_color_triangle
+)
+foreach(EXERCISE ${EXERCISES})
+    message(WARNING "building exercise" ${EXERCISE})
+    set(SOURCE_FILES src/${EXERCISE}.cpp opengl_tutorials.h debug.cpp)
+    add_executable(${EXERCISE} ${SOURCE_FILES})
+    target_link_libraries(${EXERCISE} ${COMMON_LIBS})
+endforeach(EXERCISE)
 
-set(SOURCE_FILES chapter_2/color.cpp opengl_tutorials.h debug.cpp)
-add_executable(color ${SOURCE_FILES})
-target_link_libraries(color ${COMMON_LIBS})
-
-set(SOURCE_FILES chapter_2/dot.cpp)
-add_executable(dot ${SOURCE_FILES})
-target_link_libraries(dot ${COMMON_LIBS})
-
-set(SOURCE_FILES chapter_2/triangle.cpp)
-add_executable(triangle ${SOURCE_FILES})
-target_link_libraries(triangle ${COMMON_LIBS})
-
-set(SOURCE_FILES chapter_3/animated_triangle.cpp)
-add_executable(an_triangle ${SOURCE_FILES})
-target_link_libraries(an_triangle ${COMMON_LIBS})

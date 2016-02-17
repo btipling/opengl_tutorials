@@ -3,7 +3,7 @@
 #include <iostream>
 #include "opengl_tutorials.h"
 
-class dot : public sb7::application {
+class chapter_02_dot : public sb7::application {
 public:
     void render(double currentTime) {
         float r = (float) sin(currentTime) * 0.5f + 0.5f;
@@ -11,13 +11,6 @@ public:
         GLfloat red[] = { r, g, 0.0f, 1.0f };
         glClearBufferfv(GL_COLOR, 0, red);
         glUseProgram(rendering_program);
-
-        GLfloat  attrib[] = {
-                (float)sin(currentTime) * 0.5f,
-                (float)cos(currentTime) * 0.6f,
-                0.0f, 0.0f
-        };
-        glVertexAttrib4fv(0, attrib);
         glDrawArrays(GL_TRIANGLES, 0, 3);
     }
 
@@ -26,7 +19,7 @@ public:
         GLuint fragment_shader;
         GLuint program;
 
-        std::string vertex_shader_source_string = get_shader("animated_triangle_vertex.vert");
+        std::string vertex_shader_source_string = get_shader("triangle_vertex.vert");
         const GLchar * vertex_shader_source = vertex_shader_source_string.c_str();
 
         std::string fragment_shader_source_string = get_shader("fragment.vert");
@@ -70,4 +63,4 @@ private:
 
 };
 
-DECLARE_MAIN(dot);
+DECLARE_MAIN(chapter_02_dot);
