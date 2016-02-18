@@ -16,6 +16,7 @@ public:
         };
         glVertexAttrib4fv(0, attrib);
         glUseProgram(rendering_program);
+        glPointSize(5.0f);
         glDrawArrays(GL_PATCHES, 0, 3);
     }
 
