@@ -3,7 +3,7 @@
 #include <iostream>
 #include "opengl_tutorials.h"
 
-class chapter_03_tessalated_triangle : public sb7::application {
+class chapter_03_geo_tessellated_triangle : public sb7::application {
 public:
     void render(double currentTime) {
         GLfloat red[] = { 0.25f, 0.0f, 0.0f, 1.0f };
@@ -24,6 +24,7 @@ public:
         GLuint fragment_shader;
         GLuint control_shader;
         GLuint eval_shader;
+        GLuint geo_shader;
         GLuint program;
 
         std::string vertex_shader_source_string = get_shader("animated_triangle_vertex.vert");
@@ -40,6 +41,8 @@ public:
         std::string eval_shader_source_string = get_shader("triangle_eval_shader.vert");
         const GLchar * eval_shader_source = eval_shader_source_string.c_str();
 
+        std::string geo_shader_source_string = get_shader("triangle_geo_shader.vert");
+        const GLchar * geo_shader_source = geo_shader_source_string.c_str();
 
         program = glCreateProgram();
         vertex_shader = glCreateShader(GL_VERTEX_SHADER);
@@ -58,15 +61,21 @@ public:
         glShaderSource(eval_shader, 1, &eval_shader_source, NULL);
         glCompileShader(eval_shader);
 
+        geo_shader = glCreateShader(GL_GEOMETRY_SHADER);
+        glShaderSource(geo_shader, 1, &geo_shader_source, NULL);
+        glCompileShader(geo_shader);
+
         glAttachShader(program, vertex_shader);
         glAttachShader(program, control_shader);
         glAttachShader(program, eval_shader);
         glAttachShader(program, fragment_shader);
+        glAttachShader(program, geo_shader);
 
         glDeleteShader(vertex_shader);
         glDeleteShader(control_shader);
         glDeleteShader(eval_shader);
         glDeleteShader(fragment_shader);
+        glDeleteShader(geo_shader);
 
         glLinkProgram(program);
 
@@ -92,4 +101,4 @@ private:
 
 };
 
-DECLARE_MAIN(chapter_03_tessalated_triangle);
+DECLARE_MAIN(chapter_03_geo_tessellated_triangle);
