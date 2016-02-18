@@ -32,6 +32,7 @@ set(EXERCISES
     chapter_02_triangle
     chapter_03_animated_triangle
     chapter_03_color_triangle
+    chapter_03_tessalated_triangle
 )
 foreach(EXERCISE ${EXERCISES})
     message(WARNING "building exercise" ${EXERCISE})

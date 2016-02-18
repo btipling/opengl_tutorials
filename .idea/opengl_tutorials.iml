@@ -23,11 +23,12 @@
       <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/sb7textoverlay.cpp" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_animated_triangle.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_color.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_triangle.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_tessalated_triangle.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_color_triangle.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_color.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_dot.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_animated_triangle.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_triangle.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/opengl_tutorials.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/debug.cpp" isTestSource="false" />
