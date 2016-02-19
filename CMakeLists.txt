@@ -34,6 +34,7 @@ set(EXERCISES
     chapter_03_color_triangle
     chapter_03_tessellated_triangle
     chapter_03_geo_tessellated_triangle
+    chapter_03_fragment_triangle
 )
 foreach(EXERCISE ${EXERCISES})
     message(WARNING "building exercise" ${EXERCISE})
