@@ -3,7 +3,7 @@
 #include <iostream>
 #include "opengl_tutorials.h"
 
-class chapter_03_animated_tirangle : public sb7::application {
+class chapter_03_color_triangle : public sb7::application {
 public:
     void render(double currentTime) {
         float r = (float) sin(currentTime) * 0.5f + 0.5f;
@@ -72,4 +72,4 @@ private:
 
 };
 
-DECLARE_MAIN(chapter_03_animated_tirangle);
+DECLARE_MAIN(chapter_03_color_triangle);

@@ -3,7 +3,7 @@
 #include <iostream>
 #include "opengl_tutorials.h"
 
-class chapter_02_triangle : public sb7::application {
+class chapter_03_gradient_triangle : public sb7::application {
 public:
     void render(double currentTime) {
         float r = (float) sin(currentTime) * 0.5f + 0.5f;
@@ -19,10 +19,10 @@ public:
         GLuint fragment_shader;
         GLuint program;
 
-        std::string vertex_shader_source_string = get_shader("triangle_vertex.vert");
+        std::string vertex_shader_source_string = get_shader("gradient_vert.vert");
         const GLchar * vertex_shader_source = vertex_shader_source_string.c_str();
 
-        std::string fragment_shader_source_string = get_shader("fragment.vert");
+        std::string fragment_shader_source_string = get_shader("gradient_frag.vert");
         const GLchar * fragment_shader_source = fragment_shader_source_string.c_str();
 
 
@@ -63,4 +63,4 @@ private:
 
 };
 
-DECLARE_MAIN(chapter_02_triangle);
+DECLARE_MAIN(chapter_03_gradient_triangle);
