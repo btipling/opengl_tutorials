@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$USER_HOME$/apps/sb7/src/sb7/gl3w.c">
-      <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/gl3w.c" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/apps/sb7/src/sb7/sb7.cpp">
-      <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/sb7.cpp" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/apps/sb7/src/sb7/sb7color.cpp">
-      <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/sb7color.cpp" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/apps/sb7/src/sb7/sb7ktx.cpp">
-      <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/sb7ktx.cpp" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/apps/sb7/src/sb7/sb7object.cpp">
-      <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/sb7object.cpp" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/apps/sb7/src/sb7/sb7shader.cpp">
-      <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/sb7shader.cpp" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/apps/sb7/src/sb7/sb7textoverlay.cpp">
-      <sourceFolder url="file://$USER_HOME$/apps/sb7/src/sb7/sb7textoverlay.cpp" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_gradient_triangle.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter_05_triangle.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_color_triangle.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_color.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_dot.cpp" isTestSource="false" />
@@ -36,24 +16,45 @@
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/debug.cpp" isTestSource="false" />
     </content>
+    <content url="file://C:/Users/swart/apps/sb7/src/sb7/gl3w.c">
+      <sourceFolder url="file://C:/Users/swart/apps/sb7/src/sb7/gl3w.c" isTestSource="false" />
+    </content>
+    <content url="file://C:/Users/swart/apps/sb7/src/sb7/sb7.cpp">
+      <sourceFolder url="file://C:/Users/swart/apps/sb7/src/sb7/sb7.cpp" isTestSource="false" />
+    </content>
+    <content url="file://C:/Users/swart/apps/sb7/src/sb7/sb7color.cpp">
+      <sourceFolder url="file://C:/Users/swart/apps/sb7/src/sb7/sb7color.cpp" isTestSource="false" />
+    </content>
+    <content url="file://C:/Users/swart/apps/sb7/src/sb7/sb7ktx.cpp">
+      <sourceFolder url="file://C:/Users/swart/apps/sb7/src/sb7/sb7ktx.cpp" isTestSource="false" />
+    </content>
+    <content url="file://C:/Users/swart/apps/sb7/src/sb7/sb7object.cpp">
+      <sourceFolder url="file://C:/Users/swart/apps/sb7/src/sb7/sb7object.cpp" isTestSource="false" />
+    </content>
+    <content url="file://C:/Users/swart/apps/sb7/src/sb7/sb7shader.cpp">
+      <sourceFolder url="file://C:/Users/swart/apps/sb7/src/sb7/sb7shader.cpp" isTestSource="false" />
+    </content>
+    <content url="file://C:/Users/swart/apps/sb7/src/sb7/sb7textoverlay.cpp">
+      <sourceFolder url="file://C:/Users/swart/apps/sb7/src/sb7/sb7textoverlay.cpp" isTestSource="false" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
-          <root url="file://$USER_HOME$/apps/sb7/include" />
-          <root url="file://$USER_HOME$/apps/sb7/extern/glfw-3.0.4/include" />
-          <root url="file://L:/apps/mingw/lib/gcc/mingw32/4.8.1/include-fixed" />
-          <root url="file://L:/apps/mingw/lib/gcc/mingw32/4.8.1/include" />
-          <root url="file://L:/apps/mingw/mingw32/include" />
-          <root url="file://L:/apps/mingw/include" />
+          <root url="file://C:/MinGW/lib/gcc/mingw32/4.9.3/include" />
+          <root url="file://C:/MinGW/lib/gcc/mingw32/4.9.3/include-fixed" />
+          <root url="file://C:/MinGW/mingw32/include" />
+          <root url="file://C:/MinGW/include" />
+          <root url="file://C:/Users/swart/apps/sb7/include" />
+          <root url="file://C:/Users/swart/apps/sb7/extern/glfw-3.0.4/include" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$USER_HOME$/apps/sb7/include" />
-          <root url="file://$USER_HOME$/apps/sb7/extern/glfw-3.0.4/include" />
-          <root url="file://L:/apps/mingw/lib/gcc/mingw32/4.8.1/include-fixed" />
-          <root url="file://L:/apps/mingw/lib/gcc/mingw32/4.8.1/include" />
-          <root url="file://L:/apps/mingw/mingw32/include" />
-          <root url="file://L:/apps/mingw/include" />
+          <root url="file://C:/MinGW/lib/gcc/mingw32/4.9.3/include" />
+          <root url="file://C:/MinGW/lib/gcc/mingw32/4.9.3/include-fixed" />
+          <root url="file://C:/MinGW/mingw32/include" />
+          <root url="file://C:/MinGW/include" />
+          <root url="file://C:/Users/swart/apps/sb7/include" />
+          <root url="file://C:/Users/swart/apps/sb7/extern/glfw-3.0.4/include" />
         </SOURCES>
       </library>
     </orderEntry>
