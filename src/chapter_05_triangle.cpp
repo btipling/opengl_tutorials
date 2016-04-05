@@ -11,11 +11,12 @@ public:
         float g = (float) cos(currentTime) * 0.5f + 0.5f;
         float b = (float) tan(currentTime) * 0.5f + 0.5f;
         GLfloat bg_color[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-        //GLfloat red[] = { r, g, 0.0f, 1.0f };
-        current_color[0] = r;
-        current_color[1] = g;
-        current_color[2] = b;
-        glNamedBufferSubData(vertex_array_object, 0, sizeof(current_color), current_color);
+        for (int i = 0; i < 3; i++) {
+            current_colors[i][0] = r;
+            current_colors[i][1] = g;
+            current_colors[i][2] = b;
+        }
+        glNamedBufferSubData(buffer, 0, sizeof(current_colors), current_colors);
         glClearBufferfv(GL_COLOR, 0, bg_color);
         glUseProgram(rendering_program);
         glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -56,9 +57,9 @@ public:
         glCreateVertexArrays(1, &vertex_array_object);
         glBindVertexArray(vertex_array_object);
         glCreateBuffers(1, &buffer);
-        glNamedBufferStorage(buffer, sizeof(current_color), current_color, GL_DYNAMIC_STORAGE_BIT);
-        glVertexArrayVertexBuffer(vertex_array_object, 0, buffer, 0, 0);
-        glVertexArrayAttribFormat(vertex_array_object, 0, 3, GL_FLOAT, GL_FALSE, 0);
+        glNamedBufferStorage(buffer, sizeof(current_colors), current_colors, GL_DYNAMIC_STORAGE_BIT);
+        glVertexArrayVertexBuffer(vertex_array_object, 0, buffer, 0, 4*sizeof(float));
+        glVertexArrayAttribFormat(vertex_array_object, 0, 4, GL_FLOAT, GL_FALSE, 0);
         glVertexArrayAttribBinding(vertex_array_object, 0, 0);
         glEnableVertexArrayAttrib(vertex_array_object, 0);
     }
@@ -71,7 +72,11 @@ public:
     }
 
 private:
-    GLfloat current_color[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
+    GLfloat current_colors[3][4] = {
+            { 1.0f, 0.0f, 0.0f, 1.0f },
+            { 1.0f, 0.0f, 0.0f, 1.0f },
+            { 1.0f, 0.0f, 0.0f, 1.0f },
+    };
     GLuint rendering_program;
     GLuint vertex_array_object;
     GLuint buffer;
