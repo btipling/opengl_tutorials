@@ -37,6 +37,7 @@ set(EXERCISES
     chapter_03_fragment_triangle
     chapter_03_gradient_triangle
     chapter_05_triangle
+    chapter_05_vector_of_structures
 )
 foreach(EXERCISE ${EXERCISES})
     message(WARNING "building exercise" ${EXERCISE})

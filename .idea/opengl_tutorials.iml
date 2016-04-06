@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_gradient_triangle.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter_05_vector_of_structures.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_05_triangle.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_03_color_triangle.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter_02_color.cpp" isTestSource="false" />
