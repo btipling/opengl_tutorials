@@ -15,4 +15,13 @@ std::string get_shader(std::string path) {
     vertexBuffer << vertexShaderFile.rdbuf();
     return vertexBuffer.str();
 }
+
+void check_error(const char * filename, int line_number) {
+    GLenum error;
+    while ((error = glGetError()) != 0) {
+        printf("GL Error %x: %s:%d\n", error, filename, line_number);
+        exit(1);
+    }
+}
+
 #endif //OPENGL_TUTORIALS_OPENGL_TUTORIALS_H

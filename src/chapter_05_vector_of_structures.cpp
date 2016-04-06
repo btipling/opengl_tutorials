@@ -41,6 +41,18 @@ public:
 
         vertex_shader = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
+        GLint status;
+        glGetShaderiv(vertex_shader, GL_COMPILE_STATUS, &status);
+        if (status == GL_FALSE) {
+            GLint infoLogLength;
+            glGetShaderiv(vertex_shader, GL_INFO_LOG_LENGTH, &infoLogLength);
+
+            GLchar* strInfoLog = new GLchar[infoLogLength + 1];
+            glGetShaderInfoLog(vertex_shader, infoLogLength, NULL, strInfoLog);
+
+            fprintf(stderr, "Compilation error in shader: %s\n", strInfoLog);
+            delete[] strInfoLog;
+        }
         glCompileShader(vertex_shader);
 
         fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -50,7 +62,31 @@ public:
         program = glCreateProgram();
         glAttachShader(program, vertex_shader);
         glAttachShader(program, fragment_shader);
+
+        check_error(__FILE__, __LINE__);
+
+        GLsizei result;
+
         glLinkProgram(program);
+
+        glGetProgramiv(program, GL_LINK_STATUS, &result);
+
+        if(result == GL_FALSE) {
+            GLint length;
+            char *log;
+            /* get the program info log */
+            glGetProgramiv(program, GL_INFO_LOG_LENGTH, &length);
+            log = (char *) malloc(length);
+            glGetProgramInfoLog(program, length, &result, log);
+
+            /* print an error message and the info log */
+            fprintf(stderr, "sceneInit(): Program linking failed: %s\n", log);
+            free(log);
+
+            /* delete the program */
+            glDeleteProgram(program);
+            exit(1);
+        }
 
         std::cout << glGetAttribLocation(program, "position");
         std::cout << glGetAttribLocation(program, "color");
